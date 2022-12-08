@@ -1,7 +1,8 @@
 /*
 作者: imsyy
-主页：https://www.imsyy.top/
-GitHub：https://github.com/imsyy/home
+二创：Lanbin
+主页：https://www.lanbin.top
+GitHub：https://github.com/lanbinshijie/Lanbin-home
 版权所有，请勿删除
 */
 
