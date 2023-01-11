@@ -1,0 +1,42 @@
+.right-menu {
+    display: none;
+    position: absolute;
+    width: 180px;
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 101;
+    margin: 0;
+    transition: none;
+    border: #415160 solid 1px;
+}
+.right-menu .contextmenu {
+    transition: all .2s;
+    padding: 6px;
+    opacity: 0.9;
+    background: #FFFFFF;
+}
+.right-menu .contextmenu:hover {
+    outline: black solid 1px;
+    opacity: 0.98;
+}
+.right-menu .contextmenu ul {
+    width: 100%;
+}
+.right-menu .contextmenu .nav li {
+    border-left: 3px solid transparent;
+    list-style: none;
+    width: 100%;
+}
+.right-menu .contextmenu .nav li:hover {
+    background: #c8c8c9;
+    border-left: 3px solid #415160;
+}
+.right-menu .contextmenu .nav li span {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+.right-menu .contextmenu .nav li span:hover {
+    color: #415160;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contextmenu {
+            display: none;
+            position: absolute;
+            width: 200px;
+            background: #FFFFFF;
+            border: black solid 1px;
+            border-radius: 5px;
+            overflow: hidden;
+            z-index: 101;
+            margin: 0;
+            padding: 0;
+        }
+        .contextmenu li {
+            border-left: 3px solid transparent;
+            list-style: none;
+        }
+        .contextmenu li:hover {
+            background: #c8c8c9;
+            border-left: 3px solid #1976d2;
+        }
+        .contextmenu li span {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+        }
+        .contextmenu li span:hover {
+            color: #1976d2;
+        }
+    </style>
+</head>
+<body>
+    <ul class="contextmenu">
+        <li>
+            <span>详情</span>
+        </li>
+        <li>
+            <span>功能1</span>
+        </li>
+        <li>
+            <span>功能2</span>
+        </li>
+        <li>
+            <span>功能3</span>
+        </li>
+        <li>
+            <span>功能4</span>
+        </li>
+        <li>
+            <span>功能5</span>
+        </li>
+    </ul>    
+</body>
+<script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-y/jquery/3.5.1/jquery.min.js"></script>
+<script>
+var rightMenuHide = true;
+$(document).ready(function() {
+   $(document).contextmenu(function(e) {
+        if(!rightMenuHide){
+            rightMenuHide = true;
+            $(".contextmenu").fadeOut(50);
+            return false;
+        }
+        rightMenuHide = !rightMenuHide;
+        var docWidth = $(document).width(); // 获取屏幕宽度
+        var docHeight = $(document).height(); // 获取屏幕高度
+        var mouseX = e.pageX;
+        var mouseY = e.pageY;
+        var menuWidth = $(".contextmenu").width();
+        var menuHeight = $(".contextmenu").height();
+        var betterMove = 0;
+        var minEdgeMargin = 5;
+        if (mouseX + menuWidth + minEdgeMargin >= docWidth &&
+            mouseY + menuHeight + minEdgeMargin >= docHeight) {
+            menuLeft = mouseX - menuWidth - minEdgeMargin
+            menuTop = mouseY - menuHeight - minEdgeMargin
+        } else if (mouseX + menuWidth + minEdgeMargin >= docWidth) {
+            menuLeft = mouseX - menuWidth - minEdgeMargin
+            menuTop = mouseY + minEdgeMargin
+        } else if (mouseY + menuHeight + minEdgeMargin >= docHeight) {
+            menuLeft = mouseX + minEdgeMargin
+            menuTop = mouseY - menuHeight - minEdgeMargin
+        } else {
+            menuLeft = mouseX + minEdgeMargin - betterMove
+            menuTop = mouseY + minEdgeMargin - betterMove
+        };
+        $(".contextmenu").css({
+            "left": menuLeft + "px",
+            "top": menuTop + "px"
+        }).fadeIn(80);
+        return false;
+   });
+   $(document).click(function() {
+        if(!rightMenuHide){
+            rightMenuHide = true;
+            $(".contextmenu").fadeOut(50);
+        }
+   });
+});
+</script>
+</html>

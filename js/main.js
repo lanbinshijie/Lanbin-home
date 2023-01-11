@@ -1,8 +1,7 @@
 /*
 作者: imsyy
-二创：Lanbin
-主页：https://www.lanbin.top
-GitHub：https://github.com/lanbinshijie/Lanbin-home
+主页：https://www.imsyy.top/
+GitHub：https://github.com/imsyy/home
 版权所有，请勿删除
 */
 
@@ -137,9 +136,9 @@ $('#hitokoto').click(function () {
 //获取天气
 //请前往 https://www.mxnzp.com/doc/list 申请 app_id 和 app_secret
 //请前往 https://dev.qweather.com/ 申请 key
-const add_id = "wrknltonr0foslhs"; // app_id
-const app_secret = "Nlh1c0F6d0ZDU2pDR0J3YVBVbkhudz09"; // app_secret
-const key = "433f0c48615a48dfaf2f2b2444297e79" // key
+const add_id = "jcqsawqvrduuormv"; // app_id
+const app_secret = "RXZ2TExtYUVhQXR1M3BSRUpSTjZRdz09"; // app_secret
+const key = "9513235a7c4745aa96d4b8442fd0a336" // key
 function getWeather() {
     fetch("https://www.mxnzp.com/api/ip/self?app_id=" + add_id + "&app_secret=" + app_secret)
         .then(response => response.json())
@@ -241,12 +240,12 @@ $("#social").mouseover(function () {
 });
 
 $("#github").mouseover(function () {
-    $("#link-text").html("去 Github 看看");
+    $("#link-text").html("去 Github 看看 ~");
 }).mouseout(function () {
     $("#link-text").html("通过这里联系我");
 });
 $("#qq").mouseover(function () {
-    $("#link-text").html("有什么事吗");
+    $("#link-text").html("记得告诉我你是谁 ~");
 }).mouseout(function () {
     $("#link-text").html("通过这里联系我");
 });
@@ -256,12 +255,12 @@ $("#email").mouseover(function () {
     $("#link-text").html("通过这里联系我");
 });
 $("#bilibili").mouseover(function () {
-    $("#link-text").html("来 B 站看看 ~");
+    $("#link-text").html("来 B 站关注一下 ~");
 }).mouseout(function () {
     $("#link-text").html("通过这里联系我");
 });
 $("#telegram").mouseover(function () {
-    $("#link-text").html("你懂的 ~");
+    $("#link-text").html("本人是遵纪守法的好公民 ~");
 }).mouseout(function () {
     $("#link-text").html("通过这里联系我");
 });
@@ -380,14 +379,14 @@ $("#more").hover(function () {
 })
 
 //屏蔽右键
-document.oncontextmenu = function () {
-    iziToast.show({
-        timeout: 2000,
-        icon: "fa-solid fa-circle-exclamation",
-        message: '为了浏览体验，本站禁用右键'
-    });
-    return false;
-}
+// document.oncontextmenu = function () {
+//     iziToast.show({
+//         timeout: 2000,
+//         icon: "fa-solid fa-circle-exclamation",
+//         message: '为了浏览体验，本站不能使用右键菜单呢！'
+//     });
+//     return false;
+// }
 
 //控制台输出
 //console.clear();
@@ -405,11 +404,16 @@ color: rgb(30,152,255);
 `
 let title1 = 'Lanbinの主页'
 let title2 = `
-                                        
+ _                 _     _         _    _                      
+| |               | |   (_)       | |  | |                     
+| |     __ _ _ __ | |__  _ _ __   | |__| | ___  _ __ ___   ___ 
+| |    / _\` | '_ \| '_ \| | '_ \  |  __  |/ _ \| '_ \` _ \ / _ \
+\n| |___| (_| | | | | |_) | | | | | | |  | | (_) | | | | | |  __/
+|______\__,_|_| |_|_.__/|_|_| |_| |_|  |_|\___/|_| |_| |_|\___|                                                    
 `
 let content = `
-版 本 号：3.4
-更新日期：2022-07-24
+版 本 号：1.0
+更新日期：2023-01-10
 
 主页:  https://www.lanbin.top
 Github:  https://github.com/lanbinshijie/lanbin-home
